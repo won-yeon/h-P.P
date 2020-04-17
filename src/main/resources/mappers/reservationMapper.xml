@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="reservation">
+	<select id="findRoomList" resultType="room" >
+		
+		
+		<![CDATA[
+
+		select distinct roomType, roomGrade from room where roomNo not in
+		(select roomNo from reservation where 
+		(checkInDate >=#{checkInDate} and checkInDate <= #{checkOutDate}) or 
+		(checkOutDate >=#{checkInDate} and checkInDate <= #{checkOutDate}) or
+		(checkInDate <= #{checkInDate} and checkOutDate >=#{checkOutDate}))
+		
+		]]>
+		
+		
+	</select> 
+	
+	<select id="selectRoom" resultType="java.lang.Integer">
+		<![CDATA[
+
+		select roomNo from room where roomNo not in
+		(select roomNo from reservation where 
+		(checkInDate >=#{checkInDate} and checkInDate <= #{checkOutDate}) or 
+		(checkOutDate >=#{checkInDate} and checkInDate <= #{checkOutDate}) or
+		(checkInDate <= #{checkInDate} and checkOutDate >=#{checkOutDate})) 
+		 and roomGrade = #{roomGrade} and roomType=#{roomType} and rownum =1
+		
+		]]>
+	</select>
+	
+	<insert id="insertPay">
+		
+		insert into payment values (
+			payment_seq.nextval,
+			#{userId},
+			#{price},
+			#{card},
+			#{cardNo},
+			#{cardEndMonth},
+			#{cardEndYear},
+			SYSDATE
+			)
+		
+	</insert>
+	
+	<insert id="insertRev">
+		insert into reservation values(
+				reservation_seq.nextval,
+				#{userId},
+				#{userName},
+				#{checkInDate},
+				#{checkOutDate},
+				default,
+				#{roomNo},
+				#{roomNum},
+				#{userNum},
+				#{breakFast},
+				#{extraBed},
+				#{memo},
+				#{checkInTime},
+				#{price},
+				#{point},
+				default
+				)
+	</insert>
+	
+	<insert id="insertPoint">
+		insert into pointtbl values( 
+			point_seq.nextval,
+			#{userId},
+			#{point},
+			sysdate
+			)
+		
+	</insert>
+	
+	<update id="updatePoint">
+		update hmember set remainPoint = remainPoint + #{point} where userId = #{userId}
+	</update>
+		
+	<select id="selectRevNo" resultType="java.lang.Integer">
+		select reservNo from (select * from reservation where userId=#{userId} order by reservNo desc) where rownum=1 
+	</select>
+	
+	<select id="getRemainPoint" resultType="java.lang.Integer">
+		select remainPoint from hmember where userId =#{userId}
+	
+	</select>
+</mapper>
+
+

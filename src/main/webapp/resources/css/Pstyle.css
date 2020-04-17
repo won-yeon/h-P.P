@@ -1,0 +1,595 @@
+/*레이아웃*/
+
+#header{background-color :rgb(243, 228, 187)}
+
+.footer{width: 1200px;float: left;}
+
+/* 컨테이너 */
+.container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3) */}
+
+/*헤더*/
+.header {height :130px;  }
+.header .header_menu{text-align: right;}
+.header .header_menu a{color:rgb(119, 117, 117); padding: 8px 0 6px 10px; display: inline-block; font-family: 'Abel', sans-serif;}
+.header .header_menu a:hover {color:rgb(197, 194, 194)}
+
+.header .header_tit {text-align: center; display: inline; text-transform: uppercase; margin-top: 10px;}
+.header .header_tit h1 {font-size :40px; color: rgb(134, 108, 82);;}
+.header .header_tit h1 a:hover{ color: rgb(134, 108, 82);}
+.header .header_tit a{color: rgb(134, 108, 82); font-weight: 600;}
+.header .header_tit h2 {display: block; font-size: 20px; color: rgb(134, 108, 82);}
+
+.nav{background-color: rgb(134, 108, 82); display: block; text-align: center; height: 52px;}
+
+.nav ul{overflow: hidden;}
+.nav ul {padding: 11px 0 ;}
+.nav ul .li_menu {float: right; font-size: 18px; }
+
+.nav ul li ul li {font-size: 15px; padding: 2px  0  10px 0;}
+
+.nav ul li ul.ul_sub1 li a{ padding: 2px 5px 2px 25px;}
+.nav ul li ul.ul_sub2 li a{padding: 2px 40px;}
+.nav ul li ul.ul_sub2 li a::before{width: 0;height: 0;}
+.nav ul li ul.ul_sub1 li a::before{width: 0;height: 0;}
+.nav ul li a {padding: 20px 50px; position: relative;}
+
+.nav ul li a span{color: rgb(243, 228, 187)}
+.nav ul li a:hover span{color : white}
+.nav ul a::before{content: ''; width: 1px;height: 15px;background: #ccc;
+    position: absolute; left: 0;top: 25px;}
+
+
+.nav .ul_sub1{display: block; width: 133px; background-color:rgb(134, 108, 82);}
+.nav .ul_sub2{display: block; width: 150px; background-color:rgb(134, 108, 82);}
+.nav .ul_sub1 li {float: left; display: inline; }
+.nav .ul_sub2 li {float: left; display: inline; }
+.nav ul li ul.ul_hi {
+    display: none;
+    background: rgb(134, 108, 82);
+    float: left;
+    height: auto;
+    border: 0pc;
+    position: absolute;
+    z-index: 200;
+   
+}
+
+.nav ul li:hover ul{
+    display: block;
+}
+
+/* main_Visual 예약 */
+
+
+.resvHotel {  height: 60px; padding-bottom: 20px;}
+.resvHotel_in{text-align: center; overflow: hidden; padding: 0  180px;}
+.resvHotel ul{display: block; float: left; padding: 0  32px; }
+
+.resvHotel ul li img.re_li_img{display: block;} 
+.resvHotel ul .re_li{font-size: 14px; padding-bottom: 10px; font-weight:600  ; }
+.resvHotel ul .re_li span{color: rgba(134, 108, 82,0.6);}
+
+.resvHotel ul .re_li2{font-size: 17px;}
+.resvHotel .ul_last{padding-right: 0;}
+
+/* 서브 슬라이드 */
+.intro{padding: 20px 0 0 50px;}
+.intro span{font-size: 30px; font-style: italic; font-weight: 800; color: rgb(104, 84, 64); }
+
+.slide_img{height: 400px; padding-top: 10px; position: relative;}
+.slide_img .slick-prev{position: absolute; left: -50px;top: 130px; width: 20px; height: 32px; 
+background : url(../img/l_arrow.png) no-repeat; text-indent: -9999px;}
+.slide_img .slick-next{position: absolute; right:-50px;top: 130px; width: 20px; height: 32px; 
+background:url(../img/r_arrow.png) no-repeat; text-indent: -9999px;}
+.ban .slick-prev:hover{border: 2px solid rgba(134, 108, 82,0.6);}
+.ban .slick-next:hover{border: 2px solid rgba(134, 108, 82,0.6);}
+.slide_img .slick-slide {margin: 10px;}
+.slide_img  img:hover {border: 2px solid rgba(134, 108, 82,0.6);}
+.slide_img .slick-dots{position: absolute; bottom: 100px; display: block; width: 100%; 
+    text-align: center; }
+.slide_img .slick-dots li{display: inline-block; width: 15px;height: 15px;margin: 5px;}
+.slide_img .slick-dots li button{font-size: 0; line-height: 0; display: block; width: 15px; height: 15px;
+cursor:pointer; background:rgb(104, 84, 64); border-radius: 50%;}
+.slide_img .slick-dots li.slick-active button {background:rgb(110, 89, 68);}
+
+
+/* 푸터 */
+.footer {padding: 25px 0; text-align: center;}
+.footer ul {margin-bottom: 20px;}
+.footer li {position: relative; display: inline-block; padding: 0 7px 0 10px;}
+.footer li:before{content: ''; width: 1px;height: 12px;background: #ccc;
+position: absolute; left: 0;top: 2px;}
+.footer li:first-child::before{width: 0;height: 0;}
+.footer .w3c {margin-top: 15px;}
+
+/* 로그인페이지 */
+
+.login_container {padding: 100px 200px;}
+.login_container .login_1{padding: 15px;}
+.login_container .login_1 span{font-size: 33px; color: rgb(134, 108, 82); font-weight: 700;}
+.login_main .login_text {text-align: center; padding-top: 20px;}
+.login_main .login_text .span1{font-size: 30px; color: rgb(134, 108, 82);font-weight: 900;}
+.login_main .login_text .span2{font-size: 24px; color: rgb(134, 108, 82); font-weight: 900;}
+.login_main .login_text .span3{font-size: 20px; color: rgb(134, 108, 82); font-weight: 800;}
+.login_main .login_text .span4{font-size: 17px; color: rgb(100, 88, 76); }
+
+.login_box {position: relative; height: 300px; padding-top: 30px;}
+.layer{
+    position:absolute;
+    top:20%;
+    left:24%;
+    margin:-50px 0 0 -50px;
+    border: 0;
+    border-top: 2px solid rgb(134, 108, 82);
+    background-color: rgba(243, 228, 187,0.5);
+  }
+ul{
+    list-style:none;
+    }
+.login {padding: 30px;}
+.login .top {position: relative; width: 450px;}
+
+.login .top li label { display: inline-block; width: 63px; font-size: 13px; color: #464646; font-weight: bold;}
+.login .top li input[type ="text"],.login .top li input[type ="password"] { width: 250px; height:  24px; padding: 0;}
+.login .top li {padding: 0 0 9px;}
+.login .top li.btn {position: absolute; right: 0; top: 0;}
+.login .top li a { display :block; width :109px; height: 67px; background: rgb(134, 108, 82); 
+font-size: 17px; color:#fff; text-align: center; line-height: 69px; font-weight: bold; 
+border: 1px solid rgb(104, 84, 64); }
+a:link{text-decoration: none;}
+.login .top li.save { padding:  0 0 0 59px; }
+.login .top li.save label { width:auto;font-weight: normal;}
+.login .btm { padding: 0 0 0 59px;}
+.login .btm li { padding: 0 0 0 9px; 
+    font-size: 12px; font-family: dotum; line-height: 24px;}
+.login .btm li a { margin: 10px; font-size :12px; font-family: dotum; font-weight: bold; color: rgb(165, 164, 164);
+text-decoration: underline;}
+.login .btm li a:hover {color: rgb(126, 126, 126);}
+
+/*회원가입 동의*/
+
+.join_container{padding: 70px 160px;}
+.join_container .join_top_text .span1{font-size: 30px; color: rgb(134, 108, 82); }
+.join_container .join_top_text .span2{font-size: 23px; color: rgb(134, 108, 82); }
+.join_container .join_top_text .span3{font-size: 28px; color: rgb(134, 108, 82); }
+
+.join_container .join_top{border: 1px solid rgba(226, 226, 226);  height: 51px;}
+.join_container .join_top1 {border-right: 1px solid rgba(226, 226, 226); float: left;  background-color: rgba(221, 221, 221,0.3);
+text-align: center; width: 292px; height: 51px; }
+.join_container .join_top .join_top_sapn {padding: 14px; display: block; font-size: 15px; font-weight: 600;}
+.join_container .join_top2 {border-right: 1px solid rgba(226, 226, 226); float: left; background-color: rgba(221, 221, 221,0.3); text-align: center; width: 292px; height: 51px; }
+.join_container .join_top3 {   float: left; background-color: rgba(221, 221, 221,0.3);  text-align: center; width: 292px; height: 51px; }
+
+.login_text {padding: 25px; text-align: center;}
+.login_text .span1{font-size: 30px; color: rgb(134, 108, 82); }
+.login_text .span2{font-size: 23px; color: rgb(134, 108, 82); }
+.login_text .span3{font-size: 28px; color: rgb(134, 108, 82); }
+.login_text .join_text_span4 {font-size: 12px;}
+.login_text .login_text_s{ padding: 20px;}
+
+
+.posi {position: relative;}
+.login_text1 h1 {font-size: 18px; font-weight: bold; }
+.loing_text12 h4{font-size: 13px; font-weight: bold; padding-top: 10px; padding-bottom: 20px;}
+.loing_text13 {position: absolute; top: 15px; right: 0; text-align: center;float: right; background-color: rgb(110, 89, 68); height: 30px; width: 100px;}
+.loing_text13 a{color: white; height: 90; display: inline-block; padding: 2px 21px; font-size: 15px; height: 30px;}
+.policyBox{ overflow: auto; width: 878px; height: 92px; border: 1px solid rgb(197, 194, 194);}
+.policyBox-box {padding: 30px;}
+.checkboxC {padding: 10px; position: relative;}
+.join_last {padding: 10px;}
+.join_next1{height: 40px;}
+.join_next1 .join_next11{float: left; padding: 0 20px 0 330px; height: 40px; }
+.join_next1 .join_next12{float: left; padding: 0 330px 0 0; height: 40px;}
+.join_next1 a{display: block; background-color:rgb(110, 89, 68) ; color: white; padding: 12px 30px; font-size: 15px;}
+
+/* 회원가입페이지2 */
+
+.login_secondform_text1 {padding-top: 30px;}
+.login_secondform_text1 h1 {font-size: 20px; color: rgba(59, 58, 58, 0.7); font-weight: 600;}
+
+em{color: red; font-weight: bold;}
+.join_text11 {height: 20px; padding-bottom: 20px;}
+.join_text1 {padding: 12px; float: left; display: inline-block;}
+.join_text1 span {font-size: 13px; font-weight: bold;}
+.join_text2 {float: right; padding: 10px;}
+
+table {border-collapse: collapse;  width: 100%; border-top: 2px solid rgba(165, 164, 164, 0.5); border-bottom: 2px solid rgba(165, 164, 164, 0.5) ;}
+th, td {border-top: 2px solid rgba(165, 164, 164, 0.2);  border-bottom: 2px solid rgba(165, 164, 164, 0.2) ;}
+th {background-color: rgba(243, 233, 207,0.5);}
+tr{height: 40px;}
+td {padding: 0 10px;}
+select{padding: 3px;}
+input{padding: 1px;}
+.joint_textL {padding: 15px 0; display: block;}
+.joint_textL2 {padding: 5px; text-align: center;}
+.joint_textL2 input { background-color: rgb(134, 108, 82); border: 0px; color: white; width: 100px; height: 50px;
+font-size: 15px; }
+
+.join_3_1{padding-top: 30px; text-align: center;}
+.join_3_1 span{font-size: 25px; color:  rgb(134, 108, 82);}
+.join_3_2{padding: 15px; font-size: 15px; display: block; text-align: center; font-weight: 600;} 
+
+.join_3_ {position: relative; border: 3px solid rgb(243, 228, 187); margin: 10px 150px; height: 300px; }
+
+.join_3_4 {float: left; margin: 25px 0 10px 0; padding: 0 35px; border-right: 1px solid rgb(209, 208, 208);}
+.join_3_4 span {font-size: 17px ; color: rgb(136, 135, 135); }
+.join_3_5 {float: right; margin: 25px 0 10px 0; padding: 0 150px 0 30px;}
+.join_3_5 span {font-size: 17px ; color: rgb(151, 124, 98); }
+.join_3_6 {float: left; padding: 0 95px 0 133px; border-right: 1px solid rgb(209, 208, 208); }
+.join_3_6 span {font-size: 17px ; color: rgb(136, 135, 135);}
+.join_3_7 {float: right; padding: 0 185px 0 30px;}
+.join_3_7 span {font-size: 17px ; color: rgb(151, 124, 98);}
+.join_3_8 {background-color: rgba(216, 215, 215,0.5); position: absolute; bottom: 10px; right: 12px; text-align: center; width: 550px; height: 180px; ;} 
+
+.join_3_last{padding: 30px; text-align: center; }
+.join_3_last a{ color: #fff; background-color: rgb(134, 108, 82);padding: 16px 28px; font-size: 16px;}
+
+/* 레이어팝업*/
+.pop_container{display: none; width: 866px; height: 550px;  z-index: 1111; 
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+} 
+
+.close {color: white; border: 1px solid white; padding: 2px;} 
+.close:hover{ color: white; text-decoration: underline; }
+.close_box{position: absolute; top: 6px; right: 4px;}
+.pop_head {width: 831px; height: 30px; border: 5px solid rgb(121, 99, 78); padding: 5px 0 0 25px; background-color:rgb(121, 99, 78) ; position: relative;}
+.pop_head span {color: white; font-size: 18px;}
+.pop_body {width: 802px; height: 440px; padding: 25px 27px; border: 5px solid rgb(121, 99, 78); overflow: auto; background-color: white;}
+
+
+
+/* 아이디찾기 레이어*/
+
+.find_id_container{display: none; width: 514px; height: 295px;  z-index: 1111; 
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+} 
+
+.find_id_close {color: white; border: 1px solid white; padding: 2px;} 
+.find_id_close:hover{ color: white; text-decoration: underline; }
+.find_id_close_box{position: absolute; top: 6px; right: 4px;}
+.find_id_pop_head {width: 479px; height: 30px; border: 5px solid rgb(121, 99, 78); padding: 5px 0 0 25px; background-color:rgb(121, 99, 78) ; position: relative;}
+.find_id_pop_head span {color: white; font-size: 18px;}
+.find_id_pop_body {width: 450px; height: 200px; padding: 25px 27px; border: 5px solid rgb(121, 99, 78); overflow: auto; background-color: white;}
+
+.find_id_box{ background-color: rgb(216, 227, 228); height: 80px; padding: 30px 30px;}
+.find_id_box label {padding: 20px; font-weight: 600; font-size: 15px; color: rgb(117, 117, 117);}
+.find_id_box input {width: 250px; font-size: 14px;}
+.find_id_box .find_id_box1 {padding: 5px;}
+.find_id_box .find_id_box1 label {padding: 20px 34px 20px 20px;}
+.find_id_box .find_id_box2 {padding: 5px;}
+.find_id_submit{padding: 18px 20px 0 20px; text-align: center;}
+.find_id_submit a{background-color: rgb(90, 76, 65); color: white; padding: 10px 20px 10px 20px; display: inline-block;}
+/* 아이디 찾기 결과 */
+
+.find_id_result_container{display: none; width: 514px; height: 295px;  z-index: 1111; 
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+} 
+.find_id_result_close {color: white; border: 1px solid white; padding: 2px;} 
+.find_id_result_close:hover{ color: white; text-decoration: underline; }
+.find_id_result_close_box{position: absolute; top: 6px; right: 4px;}
+.find_id_result_pop_head {width: 479px; height: 30px; border: 5px solid rgb(121, 99, 78); padding: 5px 0 0 25px; background-color:rgb(121, 99, 78) ; position: relative;}
+.find_id_result_pop_head span {color: white; font-size: 18px;}
+.find_id_result_pop_body {width: 450px; height: 200px; padding: 25px 27px; border: 5px solid rgb(121, 99, 78); overflow: auto; background-color: white;}
+
+.find_id_result_box{ background-color: rgb(216, 227, 228); height: 80px; padding: 30px 30px;}
+.find_id_result_box .find_id_result{text-align: center; padding-top: 30px;}
+.find_id_result_box .find_id_result span{font-size: 15px;}
+.find_id_result_submit {position: relative;}
+.find_id_result_login{position: absolute; top: 15px; left: 135px;}
+.find_id_result_login a{ background-color: rgb(90, 76, 65); color: white; padding: 8px 19px 8px 19px; display: inline-block;}
+.find_id_result_findpw{position: absolute;top: 15px; left: 215px;}
+.find_id_result_findpw a{background-color: rgb(90, 76, 65); color: white; padding: 8px 14px 8px 14px; display: inline-block;}
+
+/* 비밀번호찾기 레이어*/
+
+.find_pw_container{display: none; width: 514px; height: 375px;  z-index: 1111; 
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+} 
+
+.find_pw_close {color: white; border: 1px solid white; padding: 2px;} 
+.find_pw_close:hover{ color: white; text-decoration: underline; }
+.find_pw_close_box{position: absolute; top: 6px; right: 4px;}
+.find_pw_pop_head {width: 479px; height: 30px; border: 5px solid rgb(121, 99, 78); padding: 5px 0 0 25px; background-color:rgb(121, 99, 78) ; position: relative;}
+.find_pw_pop_head span {color: white; font-size: 18px;}
+.find_pw_pop_body {width: 450px; height: 270px; padding: 25px 27px; border: 5px solid rgb(121, 99, 78); overflow: auto; background-color: white;}
+
+.find_pw_box{ background-color: rgb(216, 227, 228); height: 150px; padding: 30px 30px;}
+.find_pw_box label {padding: 20px; font-weight: 600; font-size: 15px; color: rgb(117, 117, 117);}
+.find_pw_box input {width: 250px; font-size: 14px;}
+.find_pw_box .find_pw_box1 {padding: 5px;}
+.find_pw_box .find_pw_box1 label {padding: 20px 34px 20px 20px;}
+.find_pw_box .find_pw_box2 {padding: 5px;}
+.find_pw_box .find_pw_box3 {padding: 5px;}
+.find_pw_box .find_pw_box3 label{padding: 20px 6px 20px 20px;}
+.find_pw_submit{padding: 18px 20px 0 20px; text-align: center;}
+.find_pw_submit a{background-color: rgb(90, 76, 65); color: white; padding: 10px 20px 10px 20px; display: inline-block;}
+
+/*비밀번호 찾기 결과 */
+
+.find_pw_result_container{display: none; width: 514px; height: 375px;  z-index: 1111; 
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+} 
+
+.find_pw_result_close {color: white; border: 1px solid white; padding: 2px;} 
+.find_pw_result_close:hover{ color: white; text-decoration: underline; }
+.find_pw_result_close_box{position: absolute; top: 6px; right: 4px;}
+.find_pw_result_pop_head {width: 479px; height: 30px; border: 5px solid rgb(121, 99, 78); padding: 5px 0 0 25px; background-color:rgb(121, 99, 78) ; position: relative;}
+.find_pw_result_pop_head span {color: white; font-size: 18px;}
+.find_pw_result_pop_body {width: 450px; height: 270px; padding: 25px 27px; border: 5px solid rgb(121, 99, 78); overflow: auto; background-color: white;}
+
+.find_pw_result_box{ background-color: rgb(216, 227, 228); height: 150px; padding: 30px 30px; text-align: center;}
+.find_pw_result_box span{padding: 50px 20px;font-size: 15px; display: inline-block;}
+.find_pw_result_submit{padding: 18px 20px 0 20px; text-align: center;}
+.find_pw_result_submit a{background-color: rgb(90, 76, 65); color: white; padding: 10px 20px 10px 20px; display: inline-block;}
+
+.mypage_nav{float: left; background-color: rgb(243, 228, 187); padding:23px; width: 216px; height: 567px; margin-top: 65px;} 
+.mypage_nav_header_tit{margin-bottom: 29px; width: 216px;height: 48px; border-bottom: 5px solid black; }
+.mypage_nav_header_tit h1{font-size: 26px; font-weight: 500; }
+.mypage_nav_header{}
+.mypage_nav_header li{margin-bottom: 26px;}
+.mypage_nav_header li a {display: inline-block; font-size: 17px; color: rgb(121, 99, 78); font-weight: bolder; width: 216px; }
+
+.mypage_nav_header li ul li a{font-size: 12px;  }
+.mypage_nav_header li ul li {margin: 10px 0; }
+.mypage_nav_header li ul {border-top: 1px dashed rgb(104, 84, 64); margin-top: 8px;}
+.mypage_nav_header_tit_li1 a{display: inline-block; width: 216px; height: 25px; background-color:rgba(134, 108, 82,0.5) ;}
+.mypage_nav_header ul li span{font-size: 17px; color: rgb(121, 99, 78); font-weight: bolder;}
+.mypage_point{margin-top: 65px; margin-left: 70px; float: left; width: 866px;}
+.mypage_point_text span{font-size: 25px; color: rgba(114, 96, 77, 0.6);}
+.mypage_point_text2 { padding: 5px 0;}
+.mypage_point_text2 span{font-size: 16px; font-weight: 600; color: rgba(75, 63, 51, 0.8);} 
+.mypage_potin_table{border: 1px solid rgb(218, 204, 166);}
+.mypage_point_text3{ padding: 13px 0 10px 20px;}
+.mypage_point_text3_span{font-size: 16px; color: rgb(102, 85, 70); font-weight: bold;}
+
+.mypage_potin_table table {width: 824px; text-align: center; border-top :1px solid rgb(174, 183, 184)   ; border-bottom:1px solid rgb(174, 183, 184)  ;}
+.mypage_potin_table th { background-color: rgba(243, 233, 207,0.5);}
+.mypage_potin_table td  { word-break:break-all; }
+.mypage_potin_table2 {padding: 10px 20px 20px 20px;}
+.td1{width: 74px;  word-break:break-all}
+.td2{width: 80px;  word-break:break-all}
+.td3{width: 143px; word-break:break-all}
+.td4{width: 161px; word-break:break-all}
+.td5{width: 162px; word-break:break-all}
+.td6{width: 203px; word-break:break-all}
+
+.mypage_page_table_porfile_submit input{display: inline; padding: 13px 19px; color:white; background-color: rgb(90, 76, 65); border: 0;}
+.mypage_page_table_porfile_submit a {padding: 15px 19px; margin-left: 10px; color:white; background-color: rgb(90, 76, 65); border: 0;}
+.mypage_page_question_table table{text-align: center; }
+.mypage_page_question_table tr{font-size: 15px;}
+.mypage_page_question_table a:hover {color: black;}
+
+.mypage_page_question_table .q_td1 {overflow: hidden; height: 40px; width: 72px; word-break:break-all;}
+.mypage_page_question_table .q_td2 {overflow: hidden; height: 40px; width: 117px;word-break:break-all;}
+.mypage_page_question_table .q_td3 {overflow: hidden; height: 40px; width: 380px;word-break:break-all;}
+.mypage_page_question_table .q_td4 {overflow: hidden; height: 40px; width: 190px;word-break:break-all;}
+.mypage_page_question_table .q_td5 {overflow: hidden; height: 40px; width: 107px;word-break:break-all;}
+
+.mypage_page_reservation_table {text-align: center;}
+.mypage_page_reservation_table .r_td1{overflow: hidden; height: 40px; width: 90px; word-break:break-all;}
+.mypage_page_reservation_table .r_td2{overflow: hidden; height: 40px; width: 56px; word-break:break-all;}
+.mypage_page_reservation_table .r_td3{overflow: hidden; height: 40px; width: 312px;word-break:break-all;}
+.mypage_page_reservation_table .r_td4{overflow: hidden; height: 40px; width: 230px;word-break:break-all;}
+.mypage_page_reservation_table .r_td5{overflow: hidden; height: 40px; width: 108px;word-break:break-all;}
+.mypage_page_reservation_table .r_td6{overflow: hidden; height: 40px; width:  70px;word-break:break-all; text-align: center;}
+.mypage_page_reservation_table .r_td6 a{padding: 5px; color: white; background-color: rgb(78, 69, 60);}
+
+.mypage_page_question_table1 {position: relative;}
+.mypage_page_question_table1 th{width: 142px ; padding-right:0 ; }
+.mypage_page_question_table1 tr{height:50px ; padding-right:0 ; }
+
+.mypage_page_question_table1 td select{font-size: 15px; font-weight: bold;}
+
+.mypage_page_question_table1_submit{position: absolute; bottom: -60px; left: 430px; text-align: center; padding: 10px 17px; color: white ; background-color: rgb(100, 88, 76);}
+.mypage_page_question_table1_a1{position: absolute; bottom: -60px; left: 380px; text-align: center; padding: 10px 17px; color: white ; background-color: rgb(100, 88, 76);}
+.mypage_page_question_table1_a1:hover{color: white;}
+.mypage_page_question_table1_a2{position: absolute; bottom: -60px; left: 460px; text-align: center; padding: 10px 8px; color: white ; background-color: rgb(100, 88, 76);}
+.mypage_page_question_table1_a2:hover{color: white;}
+.mypage_page_question_table1_a3{position: absolute; bottom: -60px; left: 430px; text-align: center; padding: 10px 16px; color: white ; background-color: rgb(100, 88, 76);}
+.mypage_page_question_table1_a3:hover{color: white;}
+.slide_img{height: 400px; padding-top: 10px; position: relative;}
+.slide_img .slick-prev{position: absolute; left: -50px;top: 130px; width: 20px; height: 32px; 
+background : url(../img/l_arrow.png) no-repeat; text-indent: -9999px;}
+.slide_img .slick-next{position: absolute; right:-50px;top: 130px; width: 20px; height: 32px; 
+background:url(../img/r_arrow.png) no-repeat; text-indent: -9999px;}
+.ban .slick-prev:hover{border: 2px solid rgba(134, 108, 82,0.6);}
+.ban .slick-next:hover{border: 2px solid rgba(134, 108, 82,0.6);}
+.slide_img .slick-slide {margin: 10px;}
+.slide_img  img:hover {border: 2px solid rgba(134, 108, 82,0.6);}
+.slide_img .slick-dots{position: absolute; bottom: 100px; display: block; width: 100%; 
+    text-align: center; }
+.slide_img .slick-dots li{display: inline-block; width: 15px;height: 15px;margin: 5px;}
+.slide_img .slick-dots li button{font-size: 0; line-height: 0; display: block; width: 15px; height: 15px;
+cursor:pointer; background:rgb(104, 84, 64); border-radius: 50%;}
+.slide_img .slick-dots li.slick-active button {background:rgb(110, 89, 68);}
+
+.room_context {padding-top: 30px ;height: 200px;}
+.room_context_title{float: left; width: 400px; padding-bottom: 20px; }
+.room_context_title h1{font-size: 15px; color: rgba(114, 91, 68, 0.8); font-weight: 600;}
+.room_context_content {float: left; width: 400px;  }
+.room_context_content span{font-size: 13px; font-weight: 600;}
+.room_context_content h2 {font-size: 13px;}
+.room_context_subcontent{height: 303px; padding-left: 15px; float: right; width: 435px;  border-left: 1px dashed rgb(170, 137, 104);}
+
+.room_context_subcontent1{float: left; width: 200px;}
+.room_context_subcontent .tit {font-weight: bold;}
+.room_context_subcontent2{float: left;}
+.room_context_subcontent3{float: left; width: 400px;}
+
+.swim_context_subcontent1 {width: 400px;}
+
+.evnet_list{padding-top: 13px; width: 866px; }
+.evnet_list_img{float: left; width: 270px; }
+.event_list_tit{float: left;  width: 566px; padding-left: 30px; padding-bottom: 10px;}
+.event_list_tit a{font-size: 20px; color: rgb(185, 144, 105);}
+.event_list_date{float: left;  width: 566px; margin-left: 30px; padding-bottom: 12px; border-bottom: 1px dashed rgb(110, 89, 68);}
+.event_list_summery{float: left; width: 566px; padding-left: 30px; padding-top: 10px;}
+.evnet_list ul{border-bottom: 1px solid rgb(117, 117, 117);}
+
+.reserv_top{ position: relative;  height: 150px;}
+.reserv_top_process{margin: 0 532px;  text-align: center;}
+.reserv_top_process span{margin-top:5px ; display: block; color: white; font-size: 16px; font-weight: bold;}
+.reserv_top_process div{ margin: 0px 5px; text-align: center; border-radius: 50%; float: left; width: 35px;height: 35px; background-color:rgb(236, 202, 170)}
+.reserv_top_process .reserv_top_process1{ margin: 0px 5px; text-align: center; border-radius: 50%; float: left; width: 35px;height: 35px; background-color: rgb(134, 108, 82);}
+
+
+.reserv_top_context {width: 196px; position: absolute;  bottom: 0; right: 500px; height: 100px; text-align: center;}
+.reserv_top_context span{font-size: 30px;  color: rgb(134, 108, 82);}
+
+.reserv_list{padding-top: 13px; width: 1200px;  }
+.reserv_list_img{float: left; width: 300px; }
+.reserv_list_tit{float: left;  width: 800px; padding-left: 30px; padding-bottom: 10px;}
+.reserv_list_tit a{font-size: 20px; color: rgb(185, 144, 105);}
+.reserv_list_date{float: left;  width: 800px; margin-left: 30px; padding-bottom: 12px; border-bottom: 1px dashed rgb(110, 89, 68);}
+.reserv_list_summery{float: left; width: 800px; padding-left: 30px; padding-top: 10px;}
+.reserv_list ul{border-bottom: 1px solid rgb(117, 117, 117);}
+
+.reservoption{height: 665px;width: 1198px; border: 1px solid rgba(19, 19, 19, 0.2);}
+.reservoptionTop {width: 1185px; height: 32px; background-color: rgb(228, 227, 227); padding: 10px 0 2px 15px; border-top: 2px solid rgb(104, 84, 64);}
+.reservoptionTop span{ font-size: 17px;  font-weight: bold;}
+
+.reservoptionleft1{float : right; width: 515px;height: 300px;padding: 40px 40px 0 20px;}
+.reservoptionleft2{float:  right; width: 515px; height: 200px; padding: 0 40px 0 20px;}
+.reservoptionright{ float: right; width: 580px; padding-left: 19px;  height: 540px; margin: 30px  0 30px 20px;
+border-left: 1px dashed rgb(199, 197, 197);}
+
+
+.reservoptionright_1 { padding: 10px 0;}
+
+.reservoptionright .reservoptionright_1 span{font-size: 17px; font-weight: 600; }
+
+.reservoptionleft1_1 {padding-bottom: 10px;}
+.reservoptionleft1_1 span{font-size: 17px; }
+.reservoptionleft1_2 {padding-bottom: 8px; height: 30px;}
+.reservoptionleft1_2 span{font-size: 15px;} 
+.reservoptionleft1_2_1{float:left; width: 257px;height: 22px;}
+.reservoptionleft1_2_2{float:left; width: 257px;height: 22px;}
+.reservoptionleft1_2_3{float:right}
+.reservoptionleft1_5 {padding-top: 15px;}
+.reservoptionleft1_5 span {font-size: 13px; }
+
+.reservoptionleft2_1{padding: 6px 0 15px 0;}
+.reservoptionleft2_1 span{font-size:17px ; font-weight: 600;}
+.reservoptionleft2_2 {padding-top: 14px;}
+
+.reservCancle{height: 240px;width: 1198px; border: 1px solid rgba(19, 19, 19, 0.2);}
+.reservCancleTop {width: 1185px; height: 32px; background-color: rgb(228, 227, 227); padding: 10px 0 2px 15px; border-top: 2px solid rgb(104, 84, 64);}
+.reservCancleTop span{ font-size: 17px;  font-weight: bold;}
+.reservCancleContext{padding: 30px;}
+
+.reservCancleContext span p{font-size: 15px;}
+
+.reservButtonOption{  text-align: center; margin-top: 30px; height: 50px;}
+.reservButtonOption a{font-size: 15px; background-color: rgb(110, 89, 68); color: #fff; margin: 0 10px 0 10px; padding: 15px 23px;}
+.reservNextButton {font-size: 15px; background-color: rgb(110, 89, 68); color: #fff; margin: 0 10px 0 10px; padding: 13px 23px; border: 0px;}
+
+.reservChargePoint2 table tr td input:nth-child(1) {width: 100px; height: 24px;}
+.reservChargePoint1 {padding-bottom: 10px;}
+.reservChargePoint1 span{font-size: 17px ; font-weight: bold;}
+.reservChargePoint2 table {width: 550px;}
+.reservChargeCard1 table {width: 515px;}
+.reservChargeCard1 table th {width: 180px;}
+
+
+.reservationCharge{height: 365px;width: 1198px; border: 1px solid rgba(19, 19, 19, 0.2);}
+.reservationChargeTop {width: 1185px; height: 32px; background-color: rgb(228, 227, 227); padding: 10px 0 2px 15px; border-top: 2px solid rgb(104, 84, 64);}
+.reservationChargeTop span{ font-size: 17px;  font-weight: bold;}
+
+.reservationChargeleft1{float : right; width: 515px;height: 260px;padding: 30px 40px 0 20px;}
+.reservoptionleft2{float:  right; width: 515px; height: 200px; padding: 0 40px 0 20px;}
+.reservationChargeRight{ float: right; width: 580px; padding-left: 19px;  height: 240px; margin: 30px  0 30px 20px;
+border-left: 1px dashed rgb(199, 197, 197);}
+.reservationChargeRight_1 { padding: 10px 0;}
+.reservationChargeRight .reservationChargeRight_1 span{font-size: 17px; font-weight: 600; }
+.reservChargeCard2 {padding-top: 20px;}
+
+.resservEndTop{text-align: center; height: 305px;width: 1198px; border: 1px solid rgba(19, 19, 19, 0.2);}
+.resservEnd{padding: 20px;}
+.resservEnd1{padding: 15px;}
+.resservEnd1 span{font-size: 20px; font-weight: bold; color: rgb(138, 105, 73)}
+.resservEnd2{padding: 15px;}
+.resservEnd2 span{font-size: 15px; color:rgb(138, 105, 73);}
+.resservEnd3{padding: 15px;}
+.resservEnd3 span{font-size: 16px; color:rgb(138, 105, 73);}
+
+
+.roomState {height: 1000px; width: 100px; float: left;}
+.roomStateSide {float: left; height: 1000px; width: 1100px;}
+.roomFloor{ float:left;height: 100px; width: 90px; border: 1px solid black; background-color: rgb(104, 84, 64); 
+text-align: center; margin-right: 5px; margin-bottom: 5px;}
+.roomFloor span{font-size: 20px; ; margin: 30px 0; display: inline-block; color: #fff;}
+
+.roomState1{ float:left;height: 100px; width: 110px; border: 1px solid black; margin-bottom: 5px; background-color: rgb(243, 228, 187);}
+.roomState1 .roomStateColor{float: right;  height: 13px; width: 50px; text-align: center;  }
+.roomNumColor {font-size: 20px;}
+.roomState1 span{display: inline-block; font-size: 13px; font-weight: bold; margin-top: 1px; margin-left: 3px;}
+
+
+
+.roomColor1{padding-bottom: 20px; height: 40px;}
+
+.roomColor1_1{height: 40px; float: right; width: 60px; background-color: red;margin: 0 0 0 8px;}
+.roomColor1_12{ text-align: center; height: 27px;float: right;width: 55px; font-size: 15px; font-weight: bold; padding: 6px 0 6px 0px; border: 1px solid rgba(114, 91, 68, 0.4);}
+
+.roomColor1_2{height: 40px;float: right;width: 50px; background-color: blue;margin: 0 0 0 8px;}
+.roomColor1_22{ text-align: center; height: 27px;float: right;width: 55px; font-size: 15px; font-weight: bold; padding: 6px 0 6px 0px; border: 1px solid rgba(114, 91, 68, 0.4);}
+
+.roomColor1_3{height: 40px;float: right;width: 50px; background-color: black;margin: 0 0 0 8px;}
+.roomColor1_32{ text-align: center; height: 27px;float: right;width: 55px; font-size: 15px; font-weight: bold; padding: 6px 0 6px 0px; border: 1px solid rgba(114, 91, 68, 0.4);}
+
+.roomColor1_4{height: 40px;float: right;width: 50px; background-color: green; margin: 0 0 0 8px;}
+.roomColor1_42{ text-align: center; height: 27px;float: right;width: 65px; font-size: 15px; font-weight: bold; padding: 6px 0 6px 0px; border: 1px solid rgba(114, 91, 68, 0.4);}
+
+.adminpage_replybtn{bottom: -50px; right: 0; position: absolute; text-align: center; padding: 8px 17px; color: white ; background-color: rgb(100, 88, 76);}
+
+
+.eventpage_admin {float:right; height: 20px;}
+.eventpage_admin_btn {background-color: rgb(100, 88, 76); color: #fff; padding: 10px;}
+
+.r1{}
+.r2{display: none; height: 1030px;}
+.r3{display: none; height: 720px;}
+
+
+
+.reservationData{}

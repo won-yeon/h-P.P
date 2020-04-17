@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="admin">
+	<select id="memberList" resultType="member" >
+		select * from hmember
+	</select>
+	
+	<select id="memberOne" resultType="member">
+		select * from hmember where userId = #{userId}
+	</select>
+	
+	<select id="reservList" resultType="reservation">
+		select * from reservation order by reservNo desc
+	</select>
+	
+	<select id="reservListId" resultType="reservation">
+		select * from reservation where userId = #{userId} order by reservNo desc
+	</select>
+	
+	<select id="reservDetail" resultType="reservation">
+		select * from reservation where reservNO =#{reservNo}
+	</select>
+	
+	<select id="findGT" resultType="room">
+		select * from room where roomNO = #{roomNo}  
+	</select>
+	
+	<select id="MemberSearch" resultType="member">
+	
+		
+		select * from hmember 
+		where userGender = #{userGender}
+		and phone1 = #{phone1}
+		<if test='userId != ""'>
+			and userId = #{userId} 
+		</if>
+		<if test='userName != ""'>
+			and  userName = #{userName} 
+		</if> 
+		<if test='userEmail != ""'>
+			and userEmail = #{userEmail}  
+		</if>
+		<if test='phone2 != 0'>
+			and phone2 = #{phone2} 
+		</if>
+		<if test='phone3 != 0'>
+			and phone3 = #{phone3} 
+		</if>
+		<if test='regDateS != null'>
+			and regDate <![CDATA[>=]]> #{regDateS} 
+		</if>
+		<if test='regDateL != null'>
+			and regDateL <![CDATA[<=]]> #{regDateL} 
+		</if>
+	</select>
+	
+	<select id="reservSearch" resultType="reservation">
+		select * from reservation
+		WHERE 1=1 
+		<if test='reservNo !=0'>
+		 and reservNo = #{reservNo}
+		</if>
+		<if test='userId !=""'>
+		 and userId = #{userId}
+		</if> 
+		<if test="roomNo !=0">
+		 and roomNo = #{roomNo}
+		</if> 
+		<if test="reservRegDate !=null">
+		 and reservRegDate = #{reservRegDate}
+		</if> 
+		<if test="checkInDate !=null">
+		 and checkInDate = #{checkInDate}
+		</if> 
+		<if test="checkOutDate !=null">
+		 and checkOutDate = #{checkOutDate}
+		</if> 
+		<if test="isCancled !=0">
+		 and isCancled = #{isCancled}
+		</if> 
+		
+		 
+	</select>		
+	
+	<select id="question" resultType="question">
+		select * from questionboard where replyvar = 0 order by questionNo desc
+	</select>
+	
+	<select id="questionContent" resultType="question">
+		select * from questionboard where questionNo = #{questionNo}
+	</select>
+	
+	<insert id="reply">
+		insert into questionboard values (
+			question_seq.nextval,
+			#{userId},
+			#{questionType},
+			#{questionTitle},
+			#{questionContent},
+			#{groupNo},
+			1,
+			sysdate,
+			1
+		)
+	</insert>
+	
+	<update id="replyUpdate">
+		    update questionboard set isAnswer = 1 where groupNo =#{groupNo}
+	</update>
+	
+	<select id="roomList" resultType="room">
+		select * from room order by roomNo asc
+	</select>
+	
+	<select id="roomDetail" resultType="room">
+		select * from room where roomNo = #{roomNO}
+	</select>
+	
+	<update id="updateState">
+		update room set state = #{state} where roomNo = #{roomNO}
+	</update>
+	
+	<update id="autoUpdate" statementType="CALLABLE">
+		{
+			call roomUpProc()
+		}
+	</update>
+	
+	<select id="roomReservDetail" resultType="reservation">
+		select * from reservation where roomNo = #{roomNo} and checkIndate = sysdate-1
+	</select>
+	
+	<insert id="insertNonPay">
+		insert into Wpayment values (
+			nonpayment_seq.nextval,
+			'walking',
+			#{price},
+			#{card},
+			#{cardNo},
+			#{cardEndMonth},
+			#{cardEndYear},
+			sysdate
+		)
+		
+	</insert>
+	
+	<insert id="insertNonRev">
+		insert into NonReserved values (
+			nonReservation_seq.nextval,
+			'walking',
+			#{name},
+			#{checkInDate},
+			#{checkOutDate},
+			#{roomNO},
+			#{userNum},
+			#{breakfast},
+			#{extraBed},
+			#{memo},
+			#{price},
+			0,
+			sysdate
+			
+		)
+	</insert>
+	
+	<select id="selectNoneRev" resultType="nonRev">
+	   		select * from nonreserved where roomNo = #{roomNO} and ischeckout = 0
+	</select>
+	
+	<update id="nonRevCheckOut">
+			update nonreserved set ischeckout = 1 where no=#{no}
+	</update>
+	
+	<update id="reservCancle">
+			update reservation set iscancled = 1 where reservNo = #{reservNo}
+	</update>
+</mapper>

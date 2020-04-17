@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="useGeneratedKeys" value="true" />
+		<setting name="defaultExecutorType" value="REUSE" />
+		<setting name="returnInstanceForEmptyRow" value="true"/>
+		<setting name="jdbcTypeForNull" value="NULL" />
+	</settings>
+	
+	<typeAliases>
+		<!-- <typeAlias type="com.spring.hotel.vo.MemberVO" alias="member"/> -->
+		<package name="com.spring.hotel.vo"/>
+	</typeAliases>
+	<typeHandlers>
+        <typeHandler javaType="java.sql.Date"      handler="org.apache.ibatis.type.DateTypeHandler"/>
+    </typeHandlers>
+	<mappers>
+		<mapper resource="mappers/loginMapper.xml"/>
+		<mapper resource="mappers/memberMapper.xml"/>
+		<mapper resource="mappers/myPageMapper.xml"/>
+		<mapper resource="mappers/reservationMapper.xml"/>
+		<mapper resource="mappers/adminMapper.xml"/>
+	</mappers>
+</configuration>
